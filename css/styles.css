@@ -84,6 +84,23 @@ ul {
 .site-nav .current {
   color: var(--decor-color);
 }
+
+.link-current {
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--decor-color);
+  border-radius: 2px;
+}
+
 .site-nav {
   display: flex;
   padding: 0;
