@@ -62,6 +62,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link-btn:hover,
 .site-nav .link-btn:focus {
@@ -76,6 +77,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav .btn-link:hover,
 .auth-nav .btn-link:focus {
@@ -141,25 +143,14 @@ ul {
   margin-right: 10px;
   align-items: center;
   fill: currentColor;
-  fill: var(--second-text-color);
-}
-
-.icon-mail:hover {
-  fill: var(--decor-color);
 }
 
 .icon-tell {
-  width: 16px;
-  height: 12px;
+  width: 10px;
+  height: 16px;
   margin-right: 10px;
   align-items: center;
   fill: currentColor;
-  fill: var(--second-text-color);
-  padding: auto;
-}
-
-.icon-tell:hover {
-  fill: var(--decor-color);
 }
 
 .navigation {
@@ -210,11 +201,58 @@ ul {
   align-items: center;
   letter-spacing: 0.06em;
   border-color: var(--decor-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero .btn-hero:hover,
 .hero .btn-hero:focus {
   background-color: var(--second-decor-color);
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--third-text-color);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-icon {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border-color: #ffffff;
+
+  padding: 0;
+  margin: 0;
+}
+
+.icon-close {
+  position: absolute;
+  top: -15px;
+  right: -25px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+
 /*Секция особенности*/
 .caption {
   padding: 94px 0;
@@ -418,6 +456,7 @@ ul {
   height: 44px;
   background-color: #ffffff;
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-icon:not(:last-child) {
@@ -467,6 +506,7 @@ ul {
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:hover .clients-logo,
@@ -533,6 +573,7 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .link:hover,
@@ -579,6 +620,7 @@ ul {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon {
@@ -627,6 +669,8 @@ ul {
 
   border: none;
   border-radius: 4px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-portfolio .tittles:not(:last-child) {
@@ -656,6 +700,11 @@ ul {
 .main-portfolio .list {
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.main-portfolio .list:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .main-portfolio .list:nth-child(3n) {

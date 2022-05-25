@@ -50,8 +50,8 @@
               <svg class="icon-tell">
                 <use
                   href="./images/icon-header/symbol-defs.svg#icon-Phone"
-                  width="16px"
-                  height="12px"
+                  width="10px"
+                  height="16px"
                 ></use>
               </svg>
               +38 096 111 11 11</a
@@ -68,7 +68,17 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="btn-hero">Заказать услугу</button>
+          <button type="button" class="btn-hero" data-modal-open>Заказать услугу</button>
+        </div>
+
+        <div class="backdrop">
+          <div class="modal">
+            <button class="close-icon" data-modal-close>
+              <svg class="icon-close">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
